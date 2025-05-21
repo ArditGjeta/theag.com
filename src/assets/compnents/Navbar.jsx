@@ -25,7 +25,7 @@ function Navbar() {
           <li><a href="#" className="hover:underline ">Results</a></li>
           <li><a href="#" className="hover:underline ">Submit a Vehicle</a></li>
           <li><a href="#" className="hover:underline ">Features</a></li>
-          <li><a href="#" className="hover:underline ">Login</a></li>
+          <li><a href="/login" className="hover:underline ">Login</a></li>
         </ul>
         </div>
       </div>
