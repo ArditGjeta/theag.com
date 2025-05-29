@@ -1,5 +1,6 @@
 const cars = [
     {
+        id: 1,
         photo: '/dsc_0101-1.jpg',
         title: '1996 Mercedes-Benz SL70 AMG',
         bid: '$110000',
@@ -7,6 +8,7 @@ const cars = [
         desc: 'TEST 1 to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'
     },
     {
+        id: 2,
         photo: '/dsc_0198.jpg',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -14,6 +16,7 @@ const cars = [
         desc: 'TEST 2 e to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 3,
         photo: '/image-2020-05-05-11-12-59.jpg',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -21,6 +24,7 @@ const cars = [
         desc: 'TEST 3 to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 4,
         photo: '/jan_goetze-0007.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -28,6 +32,7 @@ const cars = [
         desc: 'TEST 4 o own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 5,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -35,6 +40,7 @@ const cars = [
         desc: 'TEST 5 to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 6,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -42,6 +48,7 @@ const cars = [
         desc: 'TEST 6 own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 7,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -49,6 +56,7 @@ const cars = [
         desc: 'TEST 7 to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 8,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -56,6 +64,7 @@ const cars = [
         desc: 'TEST 8 to own this S70 1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 9,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',
@@ -63,6 +72,7 @@ const cars = [
         desc: 'TEST 9  1996 Mercedes-Benz SL70 AMG only on MB Market.  Finished in Special Order Sapphire Black (009) over Exclusive Mushroom Leather (565), power is provided by an AMG-tuned 7.1-liter AMG v12, this SL70 is 1 of 150 and comes with original literature and keys.'  
     },
     {
+        id: 10,
         photo: '/jan_goetze-0083.png',
         title: '2006 Mercedes-Benz SL55 AMG',
         bid: '$23000',

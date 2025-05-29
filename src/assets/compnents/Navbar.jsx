@@ -1,36 +1,87 @@
-import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react"; 
 
+export default function Navbar() {
+  const [isShrunk, setIsShrunk] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
 
-    const divStyle = {
-        backgroundImage: "url('https://thembmarket.com/images/mblogo_circle_240.png')"
+      if (currentScrollY === 0) {
+        setIsShrunk(false);
+      } else if (currentScrollY > lastScrollY) {
+        setIsShrunk(true);
+      }
+
+      setLastScrollY(currentScrollY);
     }
-  
-function Navbar() {
-  return (
-    <nav className="md:bg-black  text-white p-7 shadow-md">
-      <div className=" flex items-baseline  justify-center gap-[350px] h-5 mb-5">
-        <div className="text-xl font-bold h-2 w-30"><img src="/mb.jpeg"/></div>
-            <div className="flex flex-col items-end">
-     <div className="flex space-x-4 mb-3.5"> 
-     <a href="#" className="hover:text-blue-500"><FaFacebook size={24} /></a>
-     <a href="#" className="hover:text-blue-500"><FaInstagram size={24} /></a>
-     <a href="#" className="hover:text-blue-500"><FaTwitter size={24} /></a>
-     <a href="#" className="hover:text-blue-500"><FaLinkedin size={24} /></a>
-     </div>
-        <ul className="flex items-center space-x-[50px]">
-          <li><a href="#" className="hover:underline ">Why The MB Market</a></li>
-          <li><a href="#" className="hover:underline ">Auctions</a></li>
-          <li><a href="#" className="hover:underline ">Results</a></li>
-          <li><a href="#" className="hover:underline ">Submit a Vehicle</a></li>
-          <li><a href="#" className="hover:underline ">Features</a></li>
-          <li><a href="/login" className="hover:underline ">Login</a></li>
-        </ul>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
-export default Navbar;
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  return (
+    <div className="flex-col">
+      <div
+        className={`fixed left-0 right-0 bg-[#fcfcfc] shadow-md z-50 transition-all duration-500 ${
+          isShrunk ? "py-4" : "py-8"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+          {/* Logo */}
+          <div className="text-xl font-bold text-gray-800">The AG Market</div>
+
+          {/* Search (only when not shrunk and on medium screens) */}
+          {!isShrunk && (
+            <div className="hidden md:block mx-5">
+              <input
+                type="search"
+                placeholder="Search..."
+                className="w-60 border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+              />
+            </div>
+          )}
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="#" className="text-gray-700 hover:text-black">
+              Home
+            </a>
+            <a href="#" className="text-gray-700 hover:text-black">
+              About
+            </a>
+            <a href="#" className="text-gray-700 hover:text-black">
+              Contact
+            </a>
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-gray-700 focus:outline-none"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="md:hidden px-4 pb-4 pt-2 flex flex-col space-y-2 bg-white shadow-md">
+            <a href="#" className="text-gray-700 hover:text-black">
+              Home
+            </a>
+            <a href="#" className="text-gray-700 hover:text-black">
+              About
+            </a>
+            <a href="#" className="text-gray-700 hover:text-black">
+              Contact
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
